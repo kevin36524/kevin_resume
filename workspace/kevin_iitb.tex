@@ -1,0 +1,237 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
+% (c) 2007 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+%
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+\documentclass[a4paper,11pt,times]{res}
+
+%-----------------------------------------------------------
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{longtable}
+%\usepackage[empty]{fullpage}
+\usepackage{color}
+\usepackage{pgfbaseimage}
+%\input pgfbaseimage.tex
+%\input pgfbaseimage.tex
+\definecolor{mygrey}{gray}{0.81}
+%\raggedbottom
+%\raggedright
+% Adjust margins to 12.5mm on all sides
+\addtolength{\oddsidemargin}{-27mm}
+\addtolength{\evensidemargin}{-27mm}
+\addtolength{\textwidth}{25mm}
+\addtolength{\topmargin}{-12.5mm}
+\addtolength{\textheight}{25mm}
+
+%-----------------------------------------------------------
+%kevin commands
+\pgfdeclareimage[height=0.6cm]{logo}{yahoo.png}
+\pgfdeclareimage[height=0.6cm]{intellogo}{intel}
+\pgfdeclareimage[height=0.6cm]{linuxlogo}{linux}
+%\usepackage[absolute,overlay]{textpos}
+%\setlength{\TPHorizModule}{1mm}
+%\setlength{\TPVertModule}{1mm}
+\newcommand{\MyLogo}{%
+\begin{textblock}
+  \pgfuseimage{logo}
+\end{textblock}
+}
+\newcommand{\linux}{%
+\begin{textblock}
+  \pgfuseimage{linuxlogo}
+\end{textblock}
+}
+\newcommand{\Intel}{%
+\begin{textblock}
+  \pgfuseimage{intellogo}
+\end{textblock}
+}
+%\pgfdeclareimage[height=18.7mm,width=33.3mm]{yahoo}{yahoo}
+  
+%%%%%
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\smalitem}[1]{\item #1 \vspace{-4pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}\vspace{4pt}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{172mm}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{4pt}}
+\newcommand{\mysubheading}[2]{
+\begin{tabular*}{172mm}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & \textit{#2} \\
+\end{tabular*}\vspace{-1pt}}
+%-----------------------------------------------------------
+
+\pagestyle{headings}
+\begin{document}
+
+
+\vspace{2pt}
+\begin{tabular*}{180mm}{l@{\extracolsep{\fill}}r}
+\textbf{\large Kevin Patel}  & \textbf{Mob:-} 91-8105654387 \\
+\textbf{Senior Software Engineer}  &  \textbf{email:-} kevin\_iitb@yahoo.com \\
+\end{tabular*}
+\\
+%\vspace{54mm}
+
+\resheading{Work Experience}
+\begin{itemize}
+
+\item
+\mysubheading{Senior Software Engineer at Yahoo }{(Aug 2010 onwards)}
+\begin{itemize}
+\vspace{-2pt}
+\smalitem{ Worked on New Yahoo Mail front-end. }
+\smalitem{ Helped in various optimization integrating partner support for New Yahoo Mail.}
+\smalitem{ Helped in supporting Multi Language support for the Product.}
+\end{itemize}
+
+\item
+\mysubheading{Linux System Administrator of VLSI Lab (250 users) }{(July 07 - July 2010)}
+\\
+%Being a Research Assistant I have the following responsibilities towards maintainance of a lab of about 250 users
+\begin{itemize}
+\vspace{-15pt}
+\smalitem{Configuring and administering NFS-server, NAS-BOX, two-level automated backup system, license servers, quota system, RAID arrays, etc. }
+%\smalitem{Installation of different softwares, managing licenses and license servers}
+\smalitem{Creating and maintaining user accounts, installing different softwares and troubleshooting various issues like network congestion, tool malfunctioning and other anomalies}
+\smalitem{Determining and implementing cost-effective and reliable solutions to many other problems like server upgradation, software procurement, memory and hard-disk management, etc. }
+\smalitem{Training junior system administrators}
+\end{itemize}
+\end{itemize}
+
+\resheading{Awards and Achievements}
+\begin{itemize}
+\smalitem{{\bf Filed a patent for Yahoo :-}
+Applied for a patent at Yahoo, which got successfully approved for publishing.}
+\end{itemize}
+
+\begin{itemize}
+\smalitem{{\bf Yahoo Best Ethical Hacker Award :-}
+Won HACKU, an institute level hacking competition organized by Yahoo, in which 250 teams participated.}
+%This was an institute level hacking competition by Yahoo and our team was one of the 4 winners out of approximately 500 people participated}
+\smalitem{{\bf Cultural Special mention by Hostel-12 :-}
+Awarded Special mention by council members of Hostel-12 for my noteworthy efforts in dance and music}
+\end{itemize}
+
+
+\resheading{M.Tech. Projects}
+\begin{itemize}
+\vspace{-5pt}
+\item
+\ressubheading{Fault Simulation Acceleration using FPGA based Hardware Emulator} {(Intel Project)}{(July 07 - June 09)}{\hspace{-2 cm}(guide: {\bf{Prof. Madhav P. Desai}})} 
+\begin{itemize}
+	\vspace{-7pt}
+\smalitem{In this approach a given circuit was partitioned into smaller circuits. Each of these partitions were evaluated using a differential algorithm }
+\smalitem{Since the fault simulation of a typical VLSI circuit may need several FPGAs, we implemented a multiboard multihost pipelined architecture and evaluated its performance using a performance model}
+\smalitem{The performance results were also validated by emulating a few ISCAS Benchmark circuits. The performance results for the same were also compared with our industry standard software fault simulator designed by me }
+\end{itemize}
+
+\item
+\vspace{5pt}
+\ressubheading{Exploiting Parallelism \&  Pipelining in {\it A Hardware Intermediate Representation (AHIR)}}{}{(July 2009 onwards)}{\hspace{-1.8 in}(guide: \it{\bf{Prof. Madhav P. Desai}})}
+	\begin{itemize}
+	\vspace{-7pt}
+\smalitem{
+AHIR presents a complete flow which starts with an algorithm specified in a high­level programming 
+language (such as C) and ends with an RTL description of a circuit that implements the specified 
+algorithm. This flow can be applied to a very large class of C programs
+}
+%	\smalitem{AHIR acts as a compiler that translates hardware descriptions in C to VHDL. But the functionality still remains in series}
+\smalitem{ Currently the generated RTL description is not able to exploit parallelism.
+My goal is to exploit inherent parallelism and pipelining of hardware and thereby bring the performance of the generated RTL comparable to the hand-crafted RTL }
+
+\end{itemize}
+\end{itemize}
+
+\resheading{ Important Course Projects}
+%\resheading{ Other Projects}
+\begin{itemize}
+%\item{Design of 6T Static Random Access Memory (SRAM-cell)}
+%\item{Design a folded cascode amplifier with PMOS differential input stage using a low-swing current mirror as active load.}
+\smalitem{Designed {\bf 32-bit shift and add multiplier} with operating frequency optimization for  Virtex-5 FPGA}
+\smalitem{ Designed {\bf 4x4 crossbar switch} with pipelined structure targeting Virtex-5 FPGA} 
+%\smalitem{Designed a {\bf 2-Stage Differential Amplifier} using IC-Studio Suite with $60^{\circ}$ phase-margin and 70db gain}
+\smalitem{Design and Layout of {\bf 31 Stage Inverter Chain Ring Oscillator} in Magic for low area specification}
+%\item{Fabricated and Characterized a MOS capacitor on 0.25 micron}
+%\item{Modeled and Simulated MOS Planar Devices with 0.25 micron technology node in Sentaurus - TCAD Suite}
+\end{itemize}
+\newpage
+\resheading{Hobby Projects}
+\begin{itemize}
+\smalitem{Designed  {\bf Alumni Information Database} using SQL and HTML}
+\smalitem{Designed and Administered the {\bf Department Election Website} }
+\smalitem{Helped in designing  Departmental {\bf Online Quiz system}}
+\smalitem{Implemented a fun project {\bf Sir Log Detector} which notifies whenever sir will be logged in}
+%\smalitem{{\bf Guitar Note finder} - It generates guitar tabs from a .wav file}
+\end{itemize}
+
+\resheading{Positions of Responsibility}
+\begin{itemize}
+
+%\smalitem[Cultural Councilor of Hostel-12(consisting of more than 500 students)]
+\smalitem{
+%As the {\bf Cultural Councilor} of Hostel-12, I am fulfilling the following responsibilities 
+ {\bf Cultural Councilor of Hostel-12}
+\begin{itemize}
+\smalitem{\vspace{-5 pt}Efficiently led a {\bf 2-tier team of 7 secretaries} to organize all cultural activities in the hostel and economically managed cultural budget of INR 0.1 million }
+%\smalitem{Conceptualized and  {\bf formed 5 clubs} for different cultural genres like photography and fine arts, music, dance, drama and debating which initiated interaction and regular sessions of various activities in hostel }
+\smalitem{Organized over 10 workshops to bring out talent of hostel mates; which increased team participation in Inter Hostel GC tournaments}
+%\smalitem{Facilitated the making of {\bf eco-friendly Ganesha idol} by hostel mates for Ganesh utsav which made the event {\bf cost efficient} and increased socialization among hostel mates}
+\smalitem{Member of the Institute Cultural Committee, headed by G.S. Cultural, which decides all the cultural activities of the Institute }
+\end{itemize}
+}
+%	I am the Cult Co of Hostel-12 with more than 500 residents. I have 5 cult-secys
+%under me to help in smooth functioning of the Hostel Cultural activities. My chief work
+%entails motivating the residents of Hostel-12 in participating in various inter hostel
+%cultural activities and also to facilitate and organize several cult workshops. Thereby
+%keeping the hostel more lively and give the much-needed family warmth to all the inmates.
+%\smalitem[ Co-ordinator of ZOPP workshop]
+\smalitem{
+	 {\bf Coordinator of ZOPP workshop} which was attended by more than 60 renowned faculties from elite colleges of the nation}
+%\smalitem {I was the only {\bf PG representative in SARC-Phonathon}; through which we contact alumni of IIT-Bombay, update their information, improve relations with them and eventually ask them for funds for various purposes}
+%\smalitem {{\bf PG representative in SARC-Phonathon}; through which we contact alumni of IIT Bombay  and eventually ask them for funds for various purposes}
+\smalitem {{\bf PG representative in SARC-Phonathon}; An Alumni relationship development and fund-raising venture managed by students of IIT Bombay}
+\smalitem{
+	Volunteered in an international conference IWPSD at IIT Bombay which was attended by approximately 600 participants}
+\end{itemize}
+\resheading{Technical Skills}
+
+\begin{itemize}
+\smalitem{{\bf Languages:}
+VHDL, Verilog, Esterel, C, Advanced C++, JAVA, SQL}
+
+\smalitem{{\bf Important Packages:}
+ GNU-Pth, NVIDIA-CUDA, YUI}
+
+\smalitem{{\bf Design Tools:}
+ModelSim, Xilinx, Spice, magic, MATLAB and various other tools of Cadence, MentorGraphics and Synopsys }
+\smalitem{{\bf Scripting and Documentation:} Shell, Perl, Python, \LaTeX}
+\smalitem{{\bf Web-related:} HTML, PHP, Javascript}
+\end{itemize}
+
+\resheading{Extra Curricular Activities \& Accolades}
+\begin{itemize}
+%\smalitem {I was the PG representative in SARC-Phonathon event through which we contact alumni of IIT-Bombay, update their information, improve relations with them and eventually ask them for funds for various purposes}
+\smalitem {Delivered lectures at institute level on {\bf Linux and Vim} as a part of orientation sessions for juniors } 
+\smalitem { Worked as a Knowledge Executive in {\bf {PT-Education}(MBA entrance coaching class)} for 2 months}
+\smalitem {Represented Hostel-12 in {\bf Gyrations-09}; inter-hostel dance competition}
+\smalitem {Represented the department in 50-meter {\bf swimming}; PG-sports(09)}
+\smalitem {Represented Hostel-12 as {\bf lead guitarist} in many cultural events}
+\smalitem {Actively volunteered and motivated all the PGs for participating in {\bf PG-Cult Festival}}
+\end{itemize}
+
+\resheading {Hobbies}
+\begin{itemize}
+\smalitem{ Dancing, Playing Guitar, Solving Rubik's Cubes}
+\end{itemize}
+\end{document}

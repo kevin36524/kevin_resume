@@ -1,0 +1,131 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
+% (c) 2007 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+%
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+\documentclass[a4paper,11pt,times]{res}
+
+%-----------------------------------------------------------
+\usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{longtable}
+%\usepackage[empty]{fullpage}
+\usepackage{color}
+\usepackage{pgfbaseimage}
+%\input pgfbaseimage.tex
+%\input pgfbaseimage.tex
+\definecolor{mygrey}{gray}{0.81}
+\definecolor{orange}{rgb}{1,0.5,0}
+\definecolor{blue}{rgb}{0,0,1}
+%\raggedbottom
+%\raggedright
+% Adjust margins to 12.5mm on all sides
+\addtolength{\oddsidemargin}{-27mm}
+\addtolength{\evensidemargin}{-27mm}
+\addtolength{\textwidth}{25mm}
+\addtolength{\topmargin}{-12.5mm}
+\addtolength{\textheight}{25mm}
+
+%-----------------------------------------------------------
+%kevin commands
+\pgfdeclareimage[height=0.6cm]{yahoologo}{yahoo.jpeg}
+%\usepackage[absolute,overlay]{textpos}
+%\setlength{\TPHorizModule}{1mm}
+%\setlength{\TPVertModule}{1mm}
+\newcommand{\YahooLogo}{
+\begin{textblock}
+  \pgfuseimage{yahoologo}
+\end{textblock}
+}
+%\pgfdeclareimage[height=18.7mm,width=33.3mm]{yahoo}{yahoo}
+  
+%%%%%
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\smalitem}[1]{\item #1 \vspace{-4pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}\vspace{4pt}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{172mm}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{4pt}}
+\newcommand{\mysubheading}[2]{
+\begin{tabular*}{172mm}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & \textit{#2} \\
+\end{tabular*}\vspace{-1pt}}
+%-----------------------------------------------------------
+
+\pagestyle{headings}
+\begin{document}
+
+\YahooLogo 
+\vspace{2pt}
+\begin{tabular*}{160mm}{l@{\extracolsep{\fill}}l}
+& \textbf{Kevin Patel} \\
+& FrontEnd Web Developer \\
+& \textbf{Designation:} IC4 - Principal Engineer \\
+& \textbf{Email:} patelkev@yahoo-inc.com \\
+& \textbf{Mobile:} +91 8105654387 \\
+\end{tabular*}
+\\
+
+\resheading{Work Experience}
+\begin{itemize}
+
+\item
+\mysubheading{Web FrontEnd Developer at Yahoo }{(Aug 2010 onwards)}
+\begin{itemize}
+\vspace{-2pt}
+\smalitem{\textbf{PostCard Calendar -} I am a major contributor to the latest Calendar front-end redesign.}
+\smalitem{\textbf{Corp Calendar -} Implemented the key front-end pieces in Corp Calendar, like free busy module,
+room availability and location autocomplete.}
+\smalitem{\textbf{Minty Fresh Calendar and Notepad -} Major challenge here was to come up with an architec- ture by which we can have both the old and the new versions of calendar working in tandem. The solution that I designed, not only prevented code duplication but also provided complete code isolation and no impact in performance. This solution was later adopted for postcard calendar and also by contacts team.}
+\smalitem{I helped in reducing the JS Errors in Calendar by 90\%}
+\smalitem{\textbf{Multi Lang Support in Yahoo! Mail -} Initially Minty Mail used to support only one language per intl. So to change the language a user had to change his/her intl. So with my contribution, we were able to allow user to choose any language without the need to switch intls.}
+\smalitem{\textbf{Partner Support in Yahoo! Mail -} From mail FE side, I managed the onboarding for many partners like Nokia, MTS, etc.}
+\smalitem{\textbf{Setting up experimentation framework for Yahoo! Mail -} Worked with the Renaissance team to set up the experimentation framework for YMail.}
+\smalitem{\textbf{YRooms -} This was an iOS app for internal Yahoos. The app gives you a list of all the available rooms nearby and book it from the app.  \href{https://docs.google.com/file/d/0B51SPIRHTG6mQjVJTE1RRWpYcnM/edit?usp=sharing}{\color{orange} Demo} \href{https://git.corp.yahoo.com/patelkev/YRoom}{\color{blue} Code}}
+\smalitem{\textbf{Cool-Cal -} This was an iOS app which displayed a calendar with all the basic functionality. One feature that we added was the conf dialer. \href{https://docs.google.com/file/d/0B51SPIRHTG6meDZxa0V4NWtSWm8/edit?usp=sharing}{\color{orange} Demo} \href{https://git.corp.yahoo.com/patelkev/TCCalendar/}{\color{blue} Code}}
+
+\end{itemize}
+
+\end{itemize}
+
+\resheading{Awards and Achievements}
+\begin{itemize}
+\smalitem{Q3 2013 Internal HackDay - Got Yahoos Choice award}
+\smalitem{Q2 2013 Individual Yahoo! U Rock Award for Excellence Exceptional Delivery and Ownership} 
+\smalitem{Q2 2011 Minty Team You Rock}
+\smalitem{Q2 2010 Public filing of a Patent}
+\end{itemize}
+
+
+\resheading{Technical Skills}
+\begin{itemize}
+\smalitem{HTML, CSS, JavaScript, NodeJS, YUI, PHP, iOS Development}
+\end{itemize} 
+
+\resheading{Academics}
+\begin{tabular*}{105mm}{l l l l}
+\hline
+\textbf{Institution}&\textbf{Degree/Major}&\textbf{Year}&\textbf{CPI/\%}\\
+\hline
+IIT Bombay & MTech - Microelectronics & 2010 & 9.34\\
+Gujarat Univ. & BE- Elect. \& Comm. & 2007 & 72.75\\
+Gujarat Board & Intermediate/ +2 & 2003 & 67.54\\
+Gujarat Boad & Matriculation & 2001 & 84.57\\
+\hline
+\end{tabular*}
+
+￼￼
+\resheading {Hobbies}
+\begin{itemize}
+\smalitem{ Dancing, Playing Guitar, Solving Rubik's Cubes}
+\end{itemize}
+\end{document}
